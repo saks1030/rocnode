@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
+import ServerSettings from './ServerSettings';
+import ServerLogs from './ServerLogs';
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
             <li>
               <Link to="/dashboard">Dashboard</Link>
             </li>
+            <li>
+              <Link to="/settings">Settings</Link>
+            </li>
+            <li>
+              <Link to="/logs">Logs</Link>
+            </li>
           </ul>
         </nav>
 
@@ -30,6 +38,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/settings" element={<ServerSettings />} />
+            <Route path="/logs" element={<ServerLogs />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </main>
